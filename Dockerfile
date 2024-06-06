@@ -1,4 +1,4 @@
-FROM node:18-alpine3.19 as builder
+FROM node:18-alpine3.20 as builder
 
 RUN echo '@edgemain http://dl-4.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories &&\
     echo '@edgecommunity http://dl-4.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories &&\
@@ -28,7 +28,7 @@ RUN cd /root/iipsrv &&\
 #     cd /usr/local/lib/node_modules &&\
 #     tar -cjf sharp.tar.bz2 sharp
 
-FROM alpine:3.19
+FROM alpine:3.20
 
 RUN echo '@edgemain http://dl-4.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories &&\
     echo '@edgecommunity http://dl-4.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories &&\
